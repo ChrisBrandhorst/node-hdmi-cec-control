@@ -1,0 +1,19 @@
+{
+  "name": "node-hdmi-cec",
+  "version": "1.0.0",
+  "description": "Enables monitoring and control of HDMI-CEC capable devices given a HDMI-CEC capable device running cec-client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisBrandhorst/node-hdmi-cec-control.git"
+  },
+  "author": "Chris Brandhorst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisBrandhorst/node-hdmi-cec-control/issues"
+  },
+  "homepage": "https://github.com/ChrisBrandhorst/node-hdmi-cec-control#readme"
+}
