@@ -1,0 +1,281 @@
+osmc@osmc:~$ cec-client
+No device type given. Using 'recording device'
+CEC Parser created - libCEC version 3.0.1
+no serial port given. trying autodetect: 
+ path:     Raspberry Pi
+ com port: RPI
+
+opening a connection to the CEC adapter...
+DEBUG:   [              63] Broadcast (F): osd name set to 'Broadcast'
+DEBUG:   [              63] InitHostCEC - vchiq_initialise succeeded
+DEBUG:   [              63] InitHostCEC - vchi_initialise succeeded
+DEBUG:   [              63] InitHostCEC - vchi_connect succeeded
+DEBUG:   [              65] logical address changed to Free use (e)
+DEBUG:   [              66] Open - vc_cec initialised
+NOTICE:  [              66] connection opened
+DEBUG:   [              68] processor thread started
+DEBUG:   [              68] << Broadcast (F) -> TV (0): POLL
+DEBUG:   [              68] initiator 'Broadcast' is not supported by the CEC adapter. using 'Free use' instead
+TRAFFIC: [              68] << e0
+DEBUG:   [             130] >> POLL sent
+DEBUG:   [             130] TV (0): device status changed into 'present'
+DEBUG:   [             130] << requesting vendor ID of 'TV' (0)
+TRAFFIC: [             130] << e0:8c
+TRAFFIC: [             323] >> 0f:87:08:00:46
+DEBUG:   [             323] TV (0): vendor = Sony (080046)
+DEBUG:   [             324] >> TV (0) -> Broadcast (F): device vendor id (87)
+DEBUG:   [             324] expected response received (87: device vendor id)
+NOTICE:  [             324] registering new CEC client - v3.0.1
+DEBUG:   [             325] detecting logical address for type 'recording device'
+DEBUG:   [             325] trying logical address 'Recorder 1'
+DEBUG:   [             325] << Recorder 1 (1) -> Recorder 1 (1): POLL
+TRAFFIC: [             325] << 11
+TRAFFIC: [             747] << 11
+DEBUG:   [            1025] >> POLL not sent
+DEBUG:   [            1025] using logical address 'Recorder 1'
+DEBUG:   [            1026] Recorder 1 (1): device status changed into 'handled by libCEC'
+DEBUG:   [            1026] Recorder 1 (1): power status changed from 'unknown' to 'on'
+DEBUG:   [            1026] Recorder 1 (1): vendor = Pulse Eight (001582)
+DEBUG:   [            1027] Recorder 1 (1): CEC version 1.4
+DEBUG:   [            1027] AllocateLogicalAddresses - device '0', type 'recording device', LA '1'
+DEBUG:   [            1030] logical address changed to Recorder 1 (1)
+DEBUG:   [            1030] Recorder 1 (1): osd name set to 'CECTester'
+DEBUG:   [            1030] Recorder 1 (1): menu language set to 'eng'
+DEBUG:   [            1031] GetPhysicalAddress - physical address = 2600
+DEBUG:   [            1032] AutodetectPhysicalAddress - autodetected physical address '2600'
+DEBUG:   [            1032] Recorder 1 (1): physical address changed from ffff to 2600
+DEBUG:   [            1033] << Recorder 1 (1) -> broadcast (F): physical adddress 2600
+TRAFFIC: [            1033] << 1f:84:26:00:01
+NOTICE:  [            1186] CEC client registered: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 2.6.0.0,  compiled on Sat Mar 26 10:30:34 UTC 2016 by root@compiler2 on Linux 3.13.0-43-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [            1187] << Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [            1187] << 10:47:43:45:43:54:65:73:74:65:72
+DEBUG:   [            1527] << requesting power status of 'TV' (0)
+TRAFFIC: [            1527] << 10:8f
+TRAFFIC: [            1527] >> 01:46
+DEBUG:   [            1531] >> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            1653] << Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [            1654] << 10:47:43:45:43:54:65:73:74:65:72
+TRAFFIC: [            2016] >> 01:8c
+DEBUG:   [            2016] << Recorder 1 (1) -> TV (0): vendor id Pulse Eight (1582)
+TRAFFIC: [            2016] << 1f:87:00:15:82
+DEBUG:   [            2017] >> TV (0) -> Recorder 1 (1): give device vendor id (8C)
+TRAFFIC: [            2176] >> 01:90:00
+DEBUG:   [            2176] TV (0): power status changed from 'unknown' to 'on'
+DEBUG:   [            2177] >> TV (0) -> Recorder 1 (1): report power status (90)
+DEBUG:   [            2178] expected response received (90: report power status)
+waiting for input
+WARNING: [            2333] unhandled response received: opcode=87 initiator=1 destination=f response=0
+WARNING: [            2636] unhandled response received: opcode=47 initiator=1 destination=0 response=0
+WARNING: [            2817] unhandled response received: opcode=47 initiator=1 destination=0 response=0
+WARNING: [            2976] unhandled response received: opcode=87 initiator=1 destination=f response=0
+WARNING: [            3133] unhandled response received: opcode=87 initiator=1 destination=f response=0
+WARNING: [            3286] unhandled response received: opcode=87 initiator=1 destination=f response=0
+scan
+requesting CEC bus information ...
+DEBUG:   [            7302] << Recorder 1 (1) -> Recorder 2 (2): POLL
+TRAFFIC: [            7303] << 12
+TRAFFIC: [            7396] << 12
+DEBUG:   [            7487] >> POLL not sent
+DEBUG:   [            7488] Recorder 2 (2): device status changed into 'not present'
+DEBUG:   [            7488] << Recorder 1 (1) -> Tuner 1 (3): POLL
+TRAFFIC: [            7489] << 13
+TRAFFIC: [            7583] << 13
+DEBUG:   [            7677] >> POLL not sent
+DEBUG:   [            7677] Tuner 1 (3): device status changed into 'not present'
+DEBUG:   [            7678] << Recorder 1 (1) -> Playback 1 (4): POLL
+TRAFFIC: [            7679] << 14
+DEBUG:   [            7715] >> POLL sent
+DEBUG:   [            7715] Playback 1 (4): device status changed into 'present'
+DEBUG:   [            7715] << Recorder 1 (1) -> Audio (5): POLL
+TRAFFIC: [            7716] << 15
+DEBUG:   [            7777] >> POLL sent
+DEBUG:   [            7777] Audio (5): device status changed into 'present'
+DEBUG:   [            7778] << Recorder 1 (1) -> Tuner 2 (6): POLL
+TRAFFIC: [            7778] << 16
+TRAFFIC: [            7871] << 16
+DEBUG:   [            7963] >> POLL not sent
+DEBUG:   [            7964] Tuner 2 (6): device status changed into 'not present'
+DEBUG:   [            7964] << Recorder 1 (1) -> Tuner 3 (7): POLL
+TRAFFIC: [            7965] << 17
+TRAFFIC: [            8056] << 17
+DEBUG:   [            8147] >> POLL not sent
+DEBUG:   [            8147] Tuner 3 (7): device status changed into 'not present'
+DEBUG:   [            8148] << Recorder 1 (1) -> Playback 2 (8): POLL
+TRAFFIC: [            8148] << 18
+TRAFFIC: [            8242] << 18
+DEBUG:   [            8333] >> POLL not sent
+DEBUG:   [            8333] Playback 2 (8): device status changed into 'not present'
+DEBUG:   [            8334] << Recorder 1 (1) -> Recorder 3 (9): POLL
+TRAFFIC: [            8334] << 19
+TRAFFIC: [            8425] << 19
+DEBUG:   [            8516] >> POLL not sent
+DEBUG:   [            8517] Recorder 3 (9): device status changed into 'not present'
+DEBUG:   [            8517] << Recorder 1 (1) -> Tuner 4 (A): POLL
+TRAFFIC: [            8518] << 1a
+TRAFFIC: [            8613] << 1a
+DEBUG:   [            8707] >> POLL not sent
+DEBUG:   [            8707] Tuner 4 (A): device status changed into 'not present'
+DEBUG:   [            8707] << Recorder 1 (1) -> Playback 3 (B): POLL
+TRAFFIC: [            8707] << 1b
+TRAFFIC: [            8801] << 1b
+DEBUG:   [            8893] >> POLL not sent
+DEBUG:   [            8894] Playback 3 (B): device status changed into 'not present'
+DEBUG:   [            8894] << Recorder 1 (1) -> Reserved 1 (C): POLL
+TRAFFIC: [            8894] << 1c
+TRAFFIC: [            8986] << 1c
+DEBUG:   [            9077] >> POLL not sent
+DEBUG:   [            9077] Reserved 1 (C): device status changed into 'not present'
+DEBUG:   [            9077] << Recorder 1 (1) -> Reserved 2 (D): POLL
+TRAFFIC: [            9077] << 1d
+TRAFFIC: [            9171] << 1d
+DEBUG:   [            9263] >> POLL not sent
+DEBUG:   [            9263] Reserved 2 (D): device status changed into 'not present'
+DEBUG:   [            9263] << Recorder 1 (1) -> Free use (E): POLL
+TRAFFIC: [            9264] << 1e
+TRAFFIC: [            9355] << 1e
+DEBUG:   [            9447] >> POLL not sent
+DEBUG:   [            9447] Free use (E): device status changed into 'not present'
+DEBUG:   [            9447] << requesting active source
+TRAFFIC: [            9447] << 1f:85
+DEBUG:   [           10514] expected response not received (82: active source)
+TRAFFIC: [           10515] << 1f:85
+DEBUG:   [           11576] expected response not received (82: active source)
+DEBUG:   [           11576] << requesting CEC version of 'TV' (0)
+TRAFFIC: [           11577] << 10:9f
+TRAFFIC: [           11720] >> 01:9e:05
+DEBUG:   [           11720] TV (0): CEC version 1.4
+DEBUG:   [           11720] >> TV (0) -> Recorder 1 (1): cec version (9E)
+DEBUG:   [           11721] expected response received (9E: cec version)
+DEBUG:   [           11721] << requesting menu language of 'TV' (0)
+TRAFFIC: [           11721] << 10:91
+TRAFFIC: [           11918] >> 0f:32:64:75:74
+DEBUG:   [           11918] TV (0): menu language set to 'dut'
+DEBUG:   [           11918] expected response received (32: set menu language)
+DEBUG:   [           11918] << requesting vendor ID of 'Playback 1' (4)
+TRAFFIC: [           11918] << 14:8c
+DEBUG:   [           11918] >> TV (0) -> Broadcast (F): set menu language (32)
+TRAFFIC: [           12252] >> 4f:87:00:1a:11
+DEBUG:   [           12252] Playback 1 (4): vendor = Google (001a11)
+DEBUG:   [           12252] expected response received (87: device vendor id)
+DEBUG:   [           12252] << requesting physical address of 'Playback 1' (4)
+TRAFFIC: [           12253] << 14:83
+DEBUG:   [           12253] >> Playback 1 (4) -> Broadcast (F): device vendor id (87)
+DEBUG:   [           13344] expected response not received (84: report physical address)
+TRAFFIC: [           13344] << 14:83
+TRAFFIC: [           13731] >> 4f:84:25:00:04
+DEBUG:   [           13731] Playback 1 (4): physical address changed from ffff to 2500
+DEBUG:   [           13732] >> Playback 1 (4) -> Broadcast (F): report physical address (84)
+DEBUG:   [           13732] expected response received (84: report physical address)
+DEBUG:   [           13733] << requesting CEC version of 'Playback 1' (4)
+TRAFFIC: [           13733] << 14:9f
+TRAFFIC: [           14033] >> 41:9e:05
+DEBUG:   [           14033] Playback 1 (4): CEC version 1.4
+DEBUG:   [           14033] >> Playback 1 (4) -> Recorder 1 (1): cec version (9E)
+DEBUG:   [           14034] expected response received (9E: cec version)
+DEBUG:   [           14034] << requesting power status of 'Playback 1' (4)
+TRAFFIC: [           14034] << 14:8f
+TRAFFIC: [           14554] >> 4f:87:00:1a:11
+DEBUG:   [           14554] >> Playback 1 (4) -> Broadcast (F): device vendor id (87)
+TRAFFIC: [           14652] >> 41:90:00
+DEBUG:   [           14652] Playback 1 (4): power status changed from 'unknown' to 'on'
+DEBUG:   [           14652] expected response received (90: report power status)
+DEBUG:   [           14652] << requesting OSD name of 'Playback 1' (4)
+TRAFFIC: [           14653] << 14:46
+DEBUG:   [           14653] >> Playback 1 (4) -> Recorder 1 (1): report power status (90)
+TRAFFIC: [           15031] >> 41:47:43:68:72:6f:6d:65:63:61:73:74
+DEBUG:   [           15031] Playback 1 (4): osd name set to 'Chromecast'
+DEBUG:   [           15031] expected response received (47: set osd name)
+DEBUG:   [           15031] << requesting menu language of 'Playback 1' (4)
+TRAFFIC: [           15031] << 14:91
+DEBUG:   [           15031] >> Playback 1 (4) -> Recorder 1 (1): set osd name (47)
+TRAFFIC: [           15216] >> 41:00:91:04
+DEBUG:   [           15216] marking opcode 'get menu language' as unsupported feature for device 'Playback 1'
+DEBUG:   [           15216] >> Playback 1 (4) -> Recorder 1 (1): feature abort ( 0)
+DEBUG:   [           15216] expected response received (32: set menu language)
+DEBUG:   [           15216] << requesting vendor ID of 'Audio' (5)
+TRAFFIC: [           15216] << 15:8c
+TRAFFIC: [           15417] >> 5f:87:00:06:78
+DEBUG:   [           15417] Audio (5): vendor = Marantz (000678)
+DEBUG:   [           15417] expected response received (87: device vendor id)
+DEBUG:   [           15417] << requesting physical address of 'Audio' (5)
+TRAFFIC: [           15418] << 15:83
+DEBUG:   [           15417] >> Audio (5) -> Broadcast (F): device vendor id (87)
+TRAFFIC: [           15641] >> 5f:84:20:00:05
+DEBUG:   [           15641] Audio (5): physical address changed from ffff to 2000
+DEBUG:   [           15641] expected response received (84: report physical address)
+DEBUG:   [           15641] >> Audio (5) -> Broadcast (F): report physical address (84)
+DEBUG:   [           15641] << requesting CEC version of 'Audio' (5)
+TRAFFIC: [           15642] << 15:9f
+TRAFFIC: [           15932] >> 51:9e:05
+DEBUG:   [           15932] Audio (5): CEC version 1.4
+DEBUG:   [           15932] expected response received (9E: cec version)
+DEBUG:   [           15932] << requesting power status of 'Audio' (5)
+DEBUG:   [           15932] >> Audio (5) -> Recorder 1 (1): cec version (9E)
+TRAFFIC: [           15932] << 15:8f
+TRAFFIC: [           16481] >> 5f:87:00:06:78
+DEBUG:   [           16481] >> Audio (5) -> Broadcast (F): device vendor id (87)
+TRAFFIC: [           16591] >> 51:90:00
+DEBUG:   [           16591] Audio (5): power status changed from 'unknown' to 'on'
+DEBUG:   [           16591] expected response received (90: report power status)
+DEBUG:   [           16591] << requesting OSD name of 'Audio' (5)
+DEBUG:   [           16591] >> Audio (5) -> Recorder 1 (1): report power status (90)
+TRAFFIC: [           16591] << 15:46
+TRAFFIC: [           16984] >> 51:47:4e:52:31:36:30:35:00:00:00:00
+DEBUG:   [           16984] Audio (5): osd name set to 'NR1605'
+DEBUG:   [           16985] >> Audio (5) -> Recorder 1 (1): set osd name (47)
+DEBUG:   [           16985] expected response received (47: set osd name)
+DEBUG:   [           16985] << requesting menu language of 'Audio' (5)
+TRAFFIC: [           16985] << 15:91
+TRAFFIC: [           17181] >> 51:00:91:00
+DEBUG:   [           17181] marking opcode 'get menu language' as unsupported feature for device 'Audio'
+DEBUG:   [           17182] >> Audio (5) -> Recorder 1 (1): feature abort ( 0)
+DEBUG:   [           17182] expected response received (32: set menu language)
+DEBUG:   [           17182] << requesting active source
+TRAFFIC: [           17182] << 1f:85
+DEBUG:   [           18275] expected response not received (82: active source)
+TRAFFIC: [           18275] << 1f:85
+CEC bus information
+===================
+device #0: TV
+address:       0.0.0.0
+active source: no
+vendor:        Sony
+osd string:    TV
+CEC version:   1.4
+power status:  on
+language:      dut
+
+
+device #1: Recorder 1
+address:       2.6.0.0
+active source: no
+vendor:        Pulse Eight
+osd string:    CECTester
+CEC version:   1.4
+power status:  on
+language:      eng
+
+
+device #4: Playback 1
+address:       2.5.0.0
+active source: no
+vendor:        Google
+osd string:    Chromecast
+CEC version:   1.4
+power status:  on
+language:      ???
+
+
+device #5: Audio
+address:       2.0.0.0
+active source: no
+vendor:        Marantz
+osd string:    NR1605
+CEC version:   1.4
+power status:  on
+language:      ???
+
+
+currently active source: unknown (-1)
+DEBUG:   [           19337] expected response not received (82: active source)
+

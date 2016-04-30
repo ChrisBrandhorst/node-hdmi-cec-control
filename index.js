@@ -1,0 +1,1 @@
+module.exports = require('./lib/hdmi-cec-control');
