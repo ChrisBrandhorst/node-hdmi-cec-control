@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 const HdmiCecController = require('../lib/hdmi-cec-control')
 
