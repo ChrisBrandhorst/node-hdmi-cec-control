@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ChrisBrandhorst/node-hdmi-cec-control/issues"
   },
-  "homepage": "https://github.com/ChrisBrandhorst/node-hdmi-cec-control#readme"
+  "homepage": "https://github.com/ChrisBrandhorst/node-hdmi-cec-control#readme",
+  "dependencies": {
+    "ssh-exec":   "",
+    "debounce":   "",
+    "underscore": ""
+  }
 }
